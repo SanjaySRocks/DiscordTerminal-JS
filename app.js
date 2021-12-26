@@ -22,13 +22,14 @@ client.on("messageCreate", function(message) {
     const timeTaken = Date.now() - message.createdTimestamp;
     message.reply(`Pong! This message had a latency of ${timeTaken}ms.`);
   }
-  else if (command === "test") {
+  else if (command === "t") {
     child.exec(args.join(' '), (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           return;
         }
         message.reply(codeBlock(stdout));
+        message.reply(codeBlock(stderr));
       });
   }
 
