@@ -29,7 +29,6 @@ client.on("messageCreate", function(message) {
           return;
         }
         message.reply(codeBlock(stdout));
-        message.reply(codeBlock(stderr));
       });
   }
 
