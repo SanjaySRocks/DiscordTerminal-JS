@@ -10,7 +10,7 @@ const prefix = "!";
 
 client.on("messageCreate", function(message) {
   if (message.author.bot) return;
-  if(message.author.id !== "373708197518901249") return;
+  if(message.author.id !== config.author_id) return;
 
   if (!message.content.startsWith(prefix)) return;
 
